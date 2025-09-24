@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>أحمد رضا فيزياء</title>
+    <link rel="icon" type="image/jpeg" href="https://scontent.fcai20-1.fna.fbcdn.net/v/t39.30808-6/476272045_623027930309716_4233656114619345545_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=VPZvHnsuzrcQ7kNvwGpDWKA&_nc_oc=Adkt4TwPv29IloOw5rouR6apDc4q3mRx0Lkz94aXKCfwwpT59LvtFfraD2Kbwgezh3M&_nc_zt=23&_nc_ht=scontent.fcai20-1.fna&_nc_gid=uPDk0nAwGvDRl1pStaccrw&oh=00_AfYzFUZ0UkHsaM1Bs-BooYogDT-SAWxEMFt5U2KZvjqYfQ&oe=68D8E74F" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <link rel="manifest" href="/manifest.json" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #111827;
+        overflow-x: hidden;
+      }
+      body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background-image: url('https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/536283955_769097919036049_4633148832353579175_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=5j4_waeIMQgQ7kNvwE6kerE&_nc_oc=Adk6L7kX0d_u-h8YIQOPk29HlOb93Wn7It9Lg6eKZuaDb6Mrx3XUepoPTt0FkCC79Wk&_nc_zt=23&_nc_ht=scontent.fcai20-4.fna&_nc_gid=kAe1vOtUe-4HQiLUDN30Dw&oh=00_AfaOCDipNEUBN3BHfBIz0mCNMEHI-xBaFIfQnC3AElMh-A&oe=68D8F12E');
+        background-size: cover;
+        background-position: center;
+        filter: blur(10px) brightness(0.4);
+        transform: scale(1.1);
+      }
+      @keyframes slide-up {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      .animate-slide-up {
+        animation: slide-up 0.5s ease-out forwards;
+      }
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .animate-fade-in {
+        animation: fade-in 0.5s ease-out forwards;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then(registration => {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, err => {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
+    </script>
+</body>
+</html>
